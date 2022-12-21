@@ -42,6 +42,8 @@ function display()
     }
     else
     {
-        document.querySelector("h4").innerHTML="Amount to be paid = " + amount;
+        var x1=Math.floor(Math.random()*2)+1;
+        alert("Thanks!! Please pay your bill, Amount to be paid = "+amount+" collect your order from counter " + x1 + " after 15 minutes.");
+        amount=0.00;
     }
 }
