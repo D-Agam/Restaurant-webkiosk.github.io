@@ -25,10 +25,10 @@ function remove(a)
             items.splice(index, 1);
         }     
         var c=document.querySelectorAll("span")[a-1].innerHTML;
-        amount=parseInt(amount)-parseInt(c);
         var index1=total.indexOf(c);
         if(index1!==-1)
         {
+            amount=parseInt(amount)-parseInt(c);
             total.splice(index1,1);
         }
         document.querySelector("h4").innerHTML="Amount to be paid = " + amount;
