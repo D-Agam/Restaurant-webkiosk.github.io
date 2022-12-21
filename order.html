@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/66fa2ad9fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Menu</title>
+</head>
+<body style="background-color:yellow;">
+    <div id="menu">
+        <h1 style="font-size:xx-large;font-weight: bolder;text-align: center;">THE MENU</h1>
+        <div style="margin-left: 600px;" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-dark"><a href="#veg">Vegetarian</a></button>&nbsp;
+            <button type="button" class="btn btn-dark"><a href="#Non-veg">Non-Vegetarian</a></button>&nbsp;
+            <button type="button" class="btn btn-dark"><a href="#drinks">Drinks</a></button>&nbsp;&nbsp;&nbsp;
+            <button onclick="display()" type="button" class="btn btn-dark"><a href="">Your Bill</a></button>&nbsp;&nbsp;&nbsp;
+            <h4 style="border:3px solid black;font-size: xx-large;">Amount to be paid = 0.00Rs</h4>
+          </div>
+        
+        <div id="veg">
+        <h1><b>Italian Margherita</b><span style="margin-left:800px;">78.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button  onclick="cart(1)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(1)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+        <hr>
+        
+        <h1><b>Cheese and Corn</b> <span span style="margin-left:810px;">105.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(2)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(2)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg) + fresh corns</p>
+        <hr>
+        
+        <h1><b>Farm House Hot!</b>
+        <span style="margin-left:800px;">220.00</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(3)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(3)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Fresh tomatoes, mozzarella, hot pepporoni, paneer and many more..</p>
+        </div>
+        
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary"><h1 id="drinks" style="text-align: center;">Non-Vegetarian</h1></button>
+        </div>
+        <div>
+        
+        <h1><b>Butter-Chicken</b>
+        <span style="margin-left:840px;">330.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(4)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(4)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Special sauce, mozzarella,home spices</p>
+        <hr>
+        
+        <h1><b>Chicken Balls</b> <span span style="margin-left:870px;">119.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(5)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(5)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Balls filled with cheese</p>
+        <hr>
+        
+        <h1><b>Fish</b> <span span style="margin-left:1045px;">251.00</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(6)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(6)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Fresh tomatoes, onions, special sauce and much more... </p>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button  type="button" class="btn btn-secondary"> <h1 id="drinks" style="text-align: center;">DRINKS</h1></button>
+        </div>
+        <div>
+        
+        <h1><b>Today's Soup</b><span span>Seasonal</span>
+        <span style="margin-left:710px;">68.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(7)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(7)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Ask the waiter</p>
+        <hr>
+
+        <h1><b>Caramell Coffee</b> <span  style="margin-left:820px;">99.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(8)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(8)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>100% Arabic Coffee + ice-cream</p>
+        <hr>
+        <h1><b>Mocktails</b> <span style="margin-left:935px;">100.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(9)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(9)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Virgin Mint Lemonade,Ginger Mocktail, etc</p>
+        <hr>
+        <h1><b>Garlic bread</b> <span  style="margin-left:890px;">69.50</span>&nbsp;&nbsp;<div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="cart(10)" type="button" class="btn btn-secondary">Add</button>
+            <button onclick="remove(10)" type="button" class="btn btn-secondary">Remove</button>
+          </div></h1>
+        <p>Grilled ciabatta, garlic butter, onions</p>
+        </div>
+        </div>
+        <script src="eg.js"></script>
+</body>
+</html>
