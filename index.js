@@ -1,3 +1,5 @@
+const audio=new Audio("Welcome.mp3");
+audio.play();
 var items=[];
 var total=[];
 let amount=0;
