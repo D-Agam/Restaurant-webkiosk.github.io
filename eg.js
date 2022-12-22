@@ -1,12 +1,14 @@
- 
+ var audio=new Audio("Welcome.mp3");
+ audio.play();
 var total=[];
 let amount=0;
+var items=[];
 function cart(y)
 {
     var x=document.querySelectorAll("b")[y-1].innerHTML;
     items.push(x);
     var z=document.querySelectorAll("span")[y-1].innerHTML;
-    amount=parseInt(z)+parseInt(amount);
+    amount=parseFloat(z)+parseFloat(amount);
     total.push(z);
     document.querySelector("h4").innerHTML="Amount to be paid = " + amount;
 }
@@ -28,7 +30,7 @@ function remove(a)
         var index1=total.indexOf(c);
         if(index1>-1)
         {
-            amount=parseInt(amount)-parseInt(c);
+            amount=parseFloat(amount)-parseFloat(c);
             total.splice(index1,1);
         }
         document.querySelector("h4").innerHTML="Amount to be paid = " + amount;
@@ -36,7 +38,7 @@ function remove(a)
 }
 function display()
 {
-    if(items.length===0 && total.length===0)
+    if(items.length===0 && total.length===0 && amount===0)
     {
         alert("Your Cart Is Empty");
     }
