@@ -38,7 +38,7 @@ function remove(a)
 }
 function display()
 {
-    if(items.length===0 && total.length===0 && amount===0)
+    if((items.length===0 && total.length===0) || amount===0)
     {
         alert("Your Cart Is Empty");
     }
